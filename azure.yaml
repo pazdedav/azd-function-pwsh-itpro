@@ -1,9 +1,11 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
 
 name: azd-function-pwsh-itpro
-infra:
-    provider: ""
-    path: ""
-    module: ""
-pipeline:
-    provider: ""
+metadata:
+    template: azd-function-pwsh-itpro@0.0.1
+services:
+    api:
+        language: powershell
+        host: function
+        project: src/api
+

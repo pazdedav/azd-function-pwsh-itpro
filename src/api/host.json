@@ -1,0 +1,26 @@
+{
+  "version": "2.0",
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request"
+      }
+    },
+    "logLevel": {
+      "default": "Information",
+      "Host": "Warning",
+      "Function": "Warning",
+      "Host.Aggregator": "Warning"
+    },
+    "fileLoggingMode": "always"
+  },
+  "managedDependency": {
+    "enabled": true
+  },
+  "functionTimeout": "00:10:00",
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "[3.*, 4.0.0)"
+  }
+}
