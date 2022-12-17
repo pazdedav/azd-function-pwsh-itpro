@@ -11,7 +11,7 @@ param serviceName string = 'api'
 param storageAccountName string
 
 module api '../core/host/functions.bicep' = {
-  name: '${serviceName}-functions-dotnet-isolated-module'
+  name: '${serviceName}-functions-powershell-module'
   params: {
     name: name
     location: location
@@ -22,8 +22,8 @@ module api '../core/host/functions.bicep' = {
     applicationInsightsName: applicationInsightsName
     appServicePlanId: appServicePlanId
     keyVaultName: keyVaultName
-    runtimeName: 'dotnet-isolated'
-    runtimeVersion: '6.0'
+    runtimeName: 'powershell'
+    runtimeVersion: '7.2'
     storageAccountName: storageAccountName
     scmDoBuildDuringDeployment: false
   }
